@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-flrig=c*+#x)86u0%e@ec&a%=&7#r77mkgvs2a@2i#trv)05x&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['4ddc-125-129-70-198.ngrok.io', '127.0.0.1']
+ALLOWED_HOSTS = [
+    '4ddc-125-129-70-198.ngrok.io', '127.0.0.1',
+    ".ap-northeast-2.compute.amazonaws.com",
+    ]
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:5173',
