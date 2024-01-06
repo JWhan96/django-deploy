@@ -179,9 +179,9 @@ def kakaopay(request, book_id):
             "quantity": 1,                # 구매 물품 수량
             "total_amount": room.room_price,  # 구매 물품 가격
             "tax_free_amount": "0",         # 구매 물품 비과세 (0으로 고정)
-            "approval_url": f"http://127.0.0.1:8000/rooms/{book_id}/kakaopay/approval/",    # 결제 성공 시 이동할 url
-            "cancel_url": f"http://127.0.0.1:8000/rooms/",               # 결제 취소 시 이동할 url
-            "fail_url": f"http://127.0.0.1:8000/rooms/",                 # 결제 실패 시 이동할 url
+            "approval_url": f"http://ec2-54-180-31-6.ap-northeast-2.compute.amazonaws.com/rooms/{book_id}/kakaopay/approval/",    # 결제 성공 시 이동할 url
+            "cancel_url": f"http://ec2-54-180-31-6.ap-northeast-2.compute.amazonaws.com/rooms/",               # 결제 취소 시 이동할 url
+            "fail_url": f"http://ec2-54-180-31-6.ap-northeast-2.compute.amazonaws.com/rooms/",                 # 결제 실패 시 이동할 url
         }
 
         res = requests.post(URL, headers=headers, params=params)
